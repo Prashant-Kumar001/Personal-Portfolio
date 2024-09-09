@@ -5,7 +5,7 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <footer className="w-full min-h-screen bg-gray-900 text-white py-10">
+        <footer className="w-full  bg-gray-900 text-white py-10">
             <div className="container mx-auto px-4 flex flex-col items-center space-y-8">
                 {/* Logo or Main Title */}
                 <h1 className="text-4xl font-bold text-center">Code with Me</h1>
