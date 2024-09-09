@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.inner {
+  position: relative;
+}
+
+.inner::after {
+  content: "";
+  position: absolute;
+  top: 36px; /* Add px to top value */
+  left: 40%; /* Adjust left */
+  right: 10%; /* Adjust right */
+  width: 100%; /* Adjust width */
+  border-radius: 60px;
+  background-color: rgb(225, 219, 219);
+  height: 60%;
+  z-index: -1;
+}
+@media (max-width: 768) {
+  .inner::after {
+    left: 11%;
+  }
+}
+
+.Header {
+  backdrop-filter: blur(10px);
+  z-index: 1;
+}
+.up-down {
+  animation: up-down 2s infinite linear alternate;
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/*  */
+.custom-img {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.15));
+}
+
+/*  */
+.Footer {
+  background-color: #212121;
+}

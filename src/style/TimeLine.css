@@ -1,0 +1,101 @@
+/* TimeLine.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  #timeLine {
+    width: 100%;
+    height: 80vh;
+    margin-bottom: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  #timeLine::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-color: rgb(45, 45, 45);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .timelineBox {
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  @keyframes up-down {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+  }
+  
+  .timelineBox::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(45, 45, 45);
+    border-radius: 50%;
+    top: 50%;
+    left: 47.9%;
+    transform: translateX(-50%) translateY(-50%);
+    animation: up-down 0.9s infinite alternate;
+  }
+  
+  .data {
+    background-color: rgb(18, 13, 35);
+    width: 100%;
+    max-width: 40%;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .timeLineRight,
+  .timeLineLeft {
+    position: absolute;
+    width: 50%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .timeLineRight {
+    right: 0;
+    text-align: left;
+  }
+  
+  .timeLineLeft {
+    left: 0;
+    text-align: right;
+  }
+  
+@media screen and (max-width: 768px) {
+  .timelineBox::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(45, 45, 45);
+    border-radius: 50%;
+    top: 50%;
+    left: 43.4%;
+    transform: translateX(-50%) translateY(-50%);
+    animation: up-down 0.9s infinite alternate;
+  }
+  
+}

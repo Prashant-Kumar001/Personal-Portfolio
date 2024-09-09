@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        background-color: #f7e9e9;
+    }
+    .inner {
+        position: relative;
+        width: 100%;
+    }
+
+    .inner::after {
+        content: "";
+        position: absolute;
+        top: 40px; /* Add px to top value */
+        left: 40%; /* Adjust left */
+        right: 10%; /* Adjust right */
+        width: 80%; /* Adjust width */
+        border-radius: 60px;
+        background-color: rgb(255, 255, 255);
+        height: 60%;
+        z-index: -1;
+    }
+</style>
+
+<body>
+    <div class="outer flex w-full h-screen justify-center items-center">
+        <div class="w-full flex gap-10 max-w-md text-center justify-between">
+            <div class="inner">
+                <h1 class="text-4xl font-bold text-teal-600">+100</h1>
+                <span class="text-black">Clients</span>
+            </div>
+            <div class="inner">
+                <h1 class="text-4xl font-bold text-teal-600">+500</h1>
+                <span class="text-black">Projects</span>
+            </div>
+            <div class="inner">
+                <h1 class="text-4xl font-bold text-teal-600">+100</h1>
+                <span class="text-black">Awards</span>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</body>
+
+</html>
